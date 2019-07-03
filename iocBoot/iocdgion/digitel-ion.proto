@@ -1,0 +1,7 @@
+Terminator = CR;
+
+getID       {   out "~ 01 01 22";   in "%*s %*s %*s %s %*s";  }
+getCurrent  {   out "~ 01 0A 32";   in "%*s %*s %*s %E %*s %*s";  }
+getPressure {   out "~ 01 0B 33";   in "%*s %*s %*s %E %*s %*s";  }
+getVoltage  {   out "~ 01 0C 34";   in "%*s %*s %*s %f %*s";  }
+getStatus   {   out "~ 01 0D 35";   in "%*s %*s %*s %s %*s";  }

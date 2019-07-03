@@ -1,0 +1,40 @@
+record (stringin, "$(BL):$(DEV):ID")
+{
+    field (DTYP, "stream")
+    field (INP,  "@digitel-ion.proto getID $(PORT)")
+    field (SCAN, "Passive")
+}
+
+record (ai, "$(BL):$(DEV):Current")
+{
+    field (DTYP, "stream")
+    field (INP,  "@digitel-ion.proto getCurrent $(PORT)")
+    field (SCAN, "1 second")
+    field (PREC, "1")
+    field (EGU, "A")
+}
+
+record (ai, "$(BL):$(DEV):Pressure")
+{
+    field (DTYP, "stream")
+    field (INP,  "@digitel-ion.proto getPressure $(PORT)")
+    field (SCAN, "1 second")
+    field (PREC, "0")
+    field (EGU, "mbar")
+}
+
+record (ai, "$(BL):$(DEV):Voltage")
+{
+    field (DTYP, "stream")
+    field (INP,  "@digitel-ion.proto getVoltage $(PORT)")
+    field (SCAN, "1 second")
+    field (PREC, "0")
+    field (EGU, "V")
+}
+
+record (stringin, "$(BL):$(DEV):Status")
+{
+    field (DTYP, "stream")
+    field (INP,  "@digitel-ion.proto getStatus $(PORT)")
+    field (SCAN, "1 second")
+}
